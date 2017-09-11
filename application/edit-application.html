@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>应用编辑</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
+        <link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+        <link rel="stylesheet" href="../css/x-admin.css" media="all">
+        <link rel="stylesheet" href="../css/style.css" media="all">
+    </head>
+    <body>
+        <div class="x-nav" style="background: #fff;">
+            <span class="layui-breadcrumb">
+                <a href="application.html"><cite>应用列表</cite></a>
+                <a><cite>应用编辑</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:5px;float:right"  href="javascript:location.replace(location.href);" title="刷新">
+                <i class="layui-icon" style="line-height:30px">ဂ</i>
+            </a>
+        </div>
+        <div class="x-body edit-application-box">
+            <div class="layui-tab-content">
+                <form class="layui-form" action="application.html">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class='x-red'>*</span>安装方式
+                        </label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="sex" value="自定义安装" title="自定义安装">
+                            <input type="radio" name="sex" value="URL安装(推荐)" title="URL安装(推荐)" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应用名称</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="name" required lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">限20个字节</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应用的主URL</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="url" required lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">该应用与CAS通信的接口URL,结尾请不要加‘/’,应用的通知只发送给主URL</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应用 IP</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="ip" required lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">正常情况下留空即可,如果由于域名解析问题导致CAS与该应用通信失败，请尝试设置为该应用所在服务器的IP地址</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">通信密钥</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="my" required lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">只允许使用英文字母及数字,限64字节。应用端的通信密钥必须与此设置保持一致,否则该应用将无法与CAS正常通信</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应用物理路径</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="lj" required lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">默认请留空,如果填写的为相对路径(相对于UC),程序自动转换为绝对路径,如../</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">个人资料地址</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="dz" required lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">URL中域名后面的部分,如:/space.php?uid=%s代表uid</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">应用接口文件</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="dz" required lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">应用接口文件名称,不含路径,默认为uc.php</div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">
+                            标签单条显示模板
+                        </label>
+                        <div class="layui-input-inline">
+                            <textarea class="layui-textarea"></textarea>
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">当前应用的标签数据显示在其他应用实践的单条数据模板</div>
+                    </div>
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">
+                            标签模板标记说明
+                        </label>
+                        <div class="layui-input-inline">
+                            <textarea class="layui-textarea"></textarea>
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">一行一个标记说明条目,用逗号分割标记和说明文字。如:subject,主题标题url,主题地址</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            是否开启登录
+                        </label>
+                        <div class="layui-input-inline">
+                            <input type="radio" name="login" value="是" title="是">
+                            <input type="radio" name="login" value="否" title="否" checked>
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">开启同步登录后，当用户在登录其他应用是,同时也会登录该应用</div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            是否接受通知
+                        </label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="msg" value="是" title="是">
+                            <input type="radio" name="msg" value="否" title="否" checked>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <button class="layui-btn" lay-submit="" lay-filter="*">
+                            保存
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="../js/jquery-1.10.2.min.js" charset="utf-8"></script>
+        <script src="../layui/layui.js" charset="utf-8"></script>
+        <script src="../js/x-admin.js"></script>
+        <script>
+            layui.use('form', function(){
+                var form = layui.form(); //只有执行了这一步，部分表单元素才会修饰成功
+            });
+            $("form").submit(function(e){
+                e.preventDefault();
+                layer.msg('保存成功', {icon: 1});
+            });
+        </script>
+    </body>
+</html>

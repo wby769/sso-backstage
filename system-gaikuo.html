@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>系统概括</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="./css/default.css">
+        <link rel="stylesheet" type="text/css" href="./layui/css/layui.css">
+        <link rel="stylesheet" href="./css/x-admin.css" media="all">
+        <link rel="stylesheet" href="./css/style.css" media="all">
+        <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_386248_7pkhdgxv927qfr.css">
+    </head>
+    <body style="background: #f2f2f2;">
+        <div class="x-nav" style="background: #fff;">
+            <span class="layui-breadcrumb">
+              <a><cite>信息概括</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:5px;float:right"  href="javascript:location.replace(location.href);" title="刷新">
+                <i class="layui-icon" style="line-height:30px">ဂ</i>
+            </a>
+        </div>
+        <div class="x-body gaikup-wrap">
+            <div class="gaikuo-item left">
+                <div class="index-title">
+                    <img src="images/icon0.png" alt="">
+                    当日实况
+                </div>
+                <ul>
+                    <li class="color1" data-title="用户在注册或登录并进行身份认证时，认证成功次数">
+                        <p><i class="iconfont icon-renzheng"></i> <span class="color0">认证成功次数</span></p>
+                        <b>1822</b>
+                    </li>
+                    <li class="color2" data-title="用户在注册或登录并进行身份认证时，认证错误次数">
+                        <p><i class="iconfont icon-renzheng"></i> <span class="color0">认证错误次数</span></p>
+                        <b>22</b>
+                    </li>
+                    <li class="color3" data-title="用户在注册或登录并进行身份认证时，与服务器连接或通信出错">
+                        <p><i class="iconfont icon-neibushenji"></i> <span class="color0">认证内部错误</span></p>
+                        <b>822</b>
+                    </li>
+                </ul>
+                <ul style="background:#fff7f0;">
+                    <li class="color4" data-title="新增用户数量">
+                        <p><i class="iconfont icon-yonghu1"></i> <span class="color0">新增用户</span></p>
+                        <b>152</b>
+                    </li>
+                    <li class="color5" data-title="删除用户数量">
+                        <p><i class="iconfont icon-yonghuzhongxinshanchu"></i> <span class="color0">删除用户</span></p>
+                        <b>3</b>
+                    </li>
+                    <li class="color1"  data-title="编辑用户数量">
+                        <p><i class="iconfont icon-bianji1"></i> <span class="color0">编辑用户</span></p>
+                        <b>854</b>
+                    </li>
+                </ul>
+                <ul style="background:#f6fcfe;">
+                    <li class="color2" data-title="密码找回次数">
+                        <p><i class="iconfont icon-mima"></i> <span class="color0">密码找回</span></p>
+                        <b>568</b>
+                    </li>
+                    <li class="color3" data-title="修改密码次数">
+                        <p><i class="iconfont icon-mima"></i> <span class="color0">修改密码</span></p>
+                        <b>5</b>
+                    </li>
+                    <li class="color4" data-title="认证应用次数">
+                        <p><i class="iconfont icon-apps"></i> <span class="color0">认证应用</span></p>
+                        <b>14</b>
+                    </li>
+                </ul>
+            </div>
+            <div class="gaikuo-item right">
+                <div class="index-title">
+                    <img src="images/icon0.png" alt="">
+                    认证概括
+                </div>
+                <div id="main1"></div>
+            </div>
+            <div class="gaikuo-item left">
+                <div class="index-title">
+                    <img src="images/icon0.png" alt="">
+                    服务器运行监控
+                </div>
+                <div id="main2"></div>
+            </div>
+            <div class="gaikuo-item right">
+                <div class="index-title">
+                    <img src="images/icon0.png" alt="">
+                    访问统计
+                </div>
+                <div id="main3"></div>
+            </div>
+        </div>
+        <script src="./js/jquery-1.10.2.min.js" charset="utf-8"></script>
+        <script src="./layui/layui.js" charset="utf-8"></script>
+        <script src="./js/x-admin.js"></script>
+        <script src="http://cdn.bootcss.com/echarts/3.3.2/echarts.min.js" charset="utf-8"></script>
+        <!-- 图例一 -->
+        <script>
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main1'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                    legend: {
+                        data: ["认证次数"],
+                        x: "center",
+                        y: "4%",
+                        selectedMode: false
+                    },
+                    xAxis: [
+                        {
+                            type: "category",
+                            data: ["08-03", "08-04", "08-05", "08-06", "08-07", "08-08", "08-09", "08-11"],
+                            axisLine: {
+                                lineStyle: {
+                                    color: "rgb(0, 0, 0)",
+                                    width: 1
+                                }
+                            },
+                            splitLine: {
+                                show: false
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: "value",
+                            axisLine: {
+                                lineStyle: {
+                                    color: "rgb(0, 0, 0)",
+                                    width: 1
+                                }
+                            },
+                            splitLine: {
+                                show: false
+                            },
+                            axisTick: {
+                                lineStyle: {
+                                    width: 0
+                                }
+                            }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: "认证次数",
+                            type: "bar",
+                            data: [65, 59, 42, 88, 72, 36, 93, 65],
+                            itemStyle: {
+                                normal: {
+                                    color: "rgb(139, 195, 74)"
+                                }
+                            },
+                            xAxisIndex: 0,
+                            yAxisIndex: 0,
+                            barGap: "30%",
+                            barWidth: 20
+                        }
+                    ],
+                    color: ["#ff7f50", "#87cefa", "#da70d6", "#32cd32", "#6495ed", "#ff69b4", "#ba55d3", "#cd5c5c", "#ffa500", "#40e0d0", "#1e90ff", "#ff6347", "#7b68ee", "rgb(139, 195, 74)", "#ffd700", "#6699FF", "#ff6666", "#3cb371", "#b8860b", "#30e0e0"],
+                    tooltip: {
+                        axisPointer: {
+                            lineStyle: {
+                                color: "rgb(178, 178, 178)",
+                                width: 1
+                            }
+                        },
+                        trigger: "axis"
+                    },
+                    grid: {
+                        x: 40,
+                        x2: 10,
+                        y: 40,
+                        y2: 40
+                    }
+                };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+        <!-- 图例二 -->
+        <script>
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main2'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                legend: {
+                    data: ["cpu使用率", "内存使用率"],
+                    x: "center",
+                    y: "4%",
+                    selectedMode: false
+                },
+                calculable: true,
+                xAxis: [
+                    {
+                        type: "category",
+                        data: ["00:00", "02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00", "16:00", "18:00", "20:00", "22:00", "24:00"],
+                        axisLine: {
+                            lineStyle: {
+                                color: "rgb(0, 0, 0)",
+                                width: 1
+                            }
+                        },
+                        splitLine: {
+                            show: false
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: "value",
+                        axisLine: {
+                            lineStyle: {
+                                color: "rgb(0, 0, 0)",
+                                width: 1
+                            }
+                        },
+                        splitLine: {
+                            show: false
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: "cpu使用率",
+                        type: "bar",
+                        data: [36, 100, 36, 37, 41, 65, 42, 27, 34, 22, 31, 46, 98],
+                        itemStyle: {
+                            normal: {
+                                color: "rgb(2, 197, 245)"
+                            }
+                        },
+                        smooth: false
+                    },
+                    {
+                        type: "bar",
+                        name: "内存使用率",
+                        data: [58, 28, 55, 89, 62, 25, 85, 68, 47, 79, 54, 80, 26],
+                        smooth: false
+                    }
+                ],
+                color: ["#ff7f50", "rgb(135, 206, 250)", "#da70d6", "#32cd32", "#6495ed", "#ff69b4", "#ba55d3", "#cd5c5c", "#ffa500", "#40e0d0", "#1e90ff", "#ff6347", "#7b68ee", "#00fa9a", "#ffd700", "#6699FF", "#ff6666", "#3cb371", "#b8860b", "#30e0e0"],
+                tooltip: {
+                    axisPointer: {
+                        lineStyle: {
+                            color: "rgb(0, 0, 0)",
+                            width: 1
+                        }
+                    },
+                    trigger: "axis"
+                },
+                backgroundColor: "rgba(0, 0, 0, 0)",
+                grid: {
+                    x: 40,
+                    x2: 10,
+                    y: 40,
+                    y2: 40
+                }
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+        <!-- 图例三 -->
+        <script>
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('main3'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                    tooltip: {
+                        trigger: "item",
+                        formatter: "{a} <br>{b} : {c}%",
+                        islandFormatter: "{a} <br>{b} : {c}"
+                    },
+                    legend: {
+                        orient: "vertical",
+                        x: "80%",
+                        data: ["游客", "涉旅企业", "旅游局"],
+                        selectedMode: false,
+                        y: "4%"
+                    },
+                    calculable: true,
+                    series: [
+                        {
+                            name: "访问统计",
+                            type: "pie",
+                            radius: ["38%", "66%"],
+                            center: ["50%", "50%"],
+                            data: [
+                                {
+                                    value: 45,
+                                    name: "游客"
+                                },
+                                {
+                                    value: 30,
+                                    name: "涉旅企业"
+                                },
+                                {
+                                    value: 25,
+                                    name: "旅游局"
+                                }
+                            ],
+                            startAngle: 90,
+                            selectedMode: "multiple"
+                        }
+                    ],
+                    color: ["rgb(233, 77, 169)", "rgb(139, 195, 74)", "rgb(255, 163, 93)", "#32cd32", "#6495ed", "#ff69b4", "#ba55d3", "#cd5c5c", "#ffa500", "#40e0d0", "#1e90ff", "#ff6347", "#7b68ee", "#00fa9a", "#ffd700", "#6699FF", "#ff6666", "#3cb371", "#b8860b", "#30e0e0"]
+                };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+        <script>
+            layui.use('form', function(){
+                var form = layui.form(); //只有执行了这一步，部分表单元素才会修饰成功
+            });
+            var tip;
+            $(".gaikuo-item").find("li").hover(function(){
+                var that = $(this);
+                var title = $(this).data("title");
+                tip = layer.tips(title, that, {
+                    tips: [2, '#333'],
+                });
+            },function(){
+                layer.close(tip);
+            })
+        </script>
+    </body>
+</html>

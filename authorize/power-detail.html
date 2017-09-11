@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>查看权限列表</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
+        <link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+        <link rel="stylesheet" href="../css/x-admin.css" media="all">
+        <link rel="stylesheet" href="../css/style.css" media="all">
+        <link rel="stylesheet" href="../css/dtree.css" media="all">
+    </head>
+    <style>
+        .dtree a.node:hover, .dtree a.nodeSel:hover{
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        <div class="x-nav" style="background: #fff;">
+            <span class="layui-breadcrumb">
+                <a><cite>授权管理</cite></a>
+                <a href="shouquan.html"><cite>群组列表</cite></a>
+                <a href="power-fenpei.html"><cite>权限分配</cite></a>
+                <a><cite>修改权限</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:5px;float:right"  href="javascript:location.replace(location.href);" title="刷新">
+                <i class="layui-icon" style="line-height:30px">ဂ</i>
+            </a>
+        </div>
+        <div class="x-body">
+            <div class="dtree inline-block f16" id="d_tree" style="padding-left: 30px;">
+                <div class="dtree">
+                  <div class="dTreeNode">权限管理</div>
+                  <div id="dd0" class="clip" style="display:block;">
+                    <div class="dTreeNode"><img src="../images/join.gif" alt=""><a id="sd1" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                      <input type="checkbox" desc=" 首页" name="authority" id="authority_1" value="1" onclick="javascript: d.checkNode(1,0,false,this.checked);" checked="checked">
+                      首页</a></div>
+                    <div class="dTreeNode"><a href="javascript: d.o(2);"><img id="jd2" src="../images/minus.gif" alt=""></a><a href="javascript: d.o(2);" class="node">
+                      <input type="checkbox" desc=" 奖励管理" name="authority" id="authority_3" value="3" onclick="javascript: d.checkNode(3,0,true,this.checked);">
+                      奖励管理</a></div>
+                    <div id="dd2" class="clip" style="display: block;">
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd28" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 奖励申报管理" name="authority" id="authority_35" value="35" onclick="javascript: d.checkNode(35,3,false,this.checked);">
+                        奖励申报管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/joinbottom.gif" alt=""><a id="sd29" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 奖励办法管理" name="authority" id="authority_34" value="34" onclick="javascript: d.checkNode(34,3,false,this.checked);">
+                        奖励办法管理</a></div>
+                    </div>
+                    <div class="dTreeNode"><a href="javascript: d.o(3);"><img id="jd3" src="../images/minus.gif" alt=""></a><a href="javascript: d.o(3);" class="node">
+                      <input type="checkbox" desc=" 资质管理" name="authority" id="authority_2" value="2" onclick="javascript: d.checkNode(2,0,true,this.checked);">
+                      资质管理</a></div>
+                    <div id="dd3" class="clip" style="display: block;">
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd30" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 旅游餐厅管理" name="authority" id="authority_33" value="33" onclick="javascript: d.checkNode(33,2,false,this.checked);">
+                        旅游餐厅管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd31" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 大巴司机管理" name="authority" id="authority_32" value="32" onclick="javascript: d.checkNode(32,2,false,this.checked);">
+                        大巴司机管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd32" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 农家乐管理" name="authority" id="authority_31" value="31" onclick="javascript: d.checkNode(31,2,false,this.checked);">
+                        农家乐管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd33" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 民宿管理" name="authority" id="authority_30" value="30" onclick="javascript: d.checkNode(30,2,false,this.checked);">
+                        民宿管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd34" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 酒店管理" name="authority" id="authority_29" value="29" onclick="javascript: d.checkNode(29,2,false,this.checked);">
+                        酒店管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd35" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 景区管理" name="authority" id="authority_28" value="28" onclick="javascript: d.checkNode(28,2,false,this.checked);">
+                        景区管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/joinbottom.gif" alt=""><a id="sd36" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 旅行社管理" name="authority" id="authority_27" value="27" onclick="javascript: d.checkNode(27,2,false,this.checked);">
+                        旅行社管理</a></div>
+                    </div>
+                    <div class="dTreeNode"><img src="../images/join.gif" alt=""><a id="sd4" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                      <input type="checkbox" desc=" 团队管理" name="authority" id="authority_4" value="4" onclick="javascript: d.checkNode(4,0,false,this.checked);">
+                      团队管理</a></div>
+                    <div class="dTreeNode"><a href="javascript: d.o(5);"><img id="jd5" src="../images/minus.gif" alt=""></a><a href="javascript: d.o(5);" class="node">
+                      <input type="checkbox" desc=" 政策公示" name="authority" id="authority_5" value="5" onclick="javascript: d.checkNode(5,0,true,this.checked);">
+                      政策公示</a></div>
+                    <div id="dd5" class="clip" style="display: block;">
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd26" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 政策类型管理" name="authority" id="authority_37" value="37" onclick="javascript: d.checkNode(37,5,false,this.checked);">
+                        政策类型管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/joinbottom.gif" alt=""><a id="sd27" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 政策发布管理" name="authority" id="authority_36" value="36" onclick="javascript: d.checkNode(36,5,false,this.checked);">
+                        政策发布管理</a></div>
+                    </div>
+                    <div class="dTreeNode"><a href="javascript: d.o(6);"><img id="jd6" src="../images/minus.gif" alt=""></a><a href="javascript: d.o(6);" class="node">
+                      <input type="checkbox" desc=" 办事大厅" name="authority" id="authority_6" value="6" onclick="javascript: d.checkNode(6,0,true,this.checked);">
+                      办事大厅</a></div>
+                    <div id="dd6" class="clip" style="display: block;">
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd24" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 申报事项审批" name="authority" id="authority_39" value="39" onclick="javascript: d.checkNode(39,6,false,this.checked);">
+                        申报事项审批</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/joinbottom.gif" alt=""><a id="sd25" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 服务事项管理" name="authority" id="authority_38" value="38" onclick="javascript: d.checkNode(38,6,false,this.checked);">
+                        服务事项管理</a></div>
+                    </div>
+                    <div class="dTreeNode"><a href="javascript: d.o(7);"><img id="jd7" src="../images/minus.gif" alt=""></a><a href="javascript: d.o(7);" class="node">
+                      <input type="checkbox" desc=" 投诉管理" name="authority" id="authority_7" value="7" onclick="javascript: d.checkNode(7,0,true,this.checked);" checked="checked">
+                      投诉管理</a></div>
+                    <div id="dd7" class="clip" style="display: block;">
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd16" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 投诉事件管理" name="authority" id="authority_47" value="47" onclick="javascript: d.checkNode(47,7,false,this.checked);" checked="checked">
+                        投诉事件管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd17" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 已结案投诉" name="authority" id="authority_46" value="46" onclick="javascript: d.checkNode(46,7,false,this.checked);" checked="checked">
+                        已结案投诉</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd18" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 不予受理投诉" name="authority" id="authority_45" value="45" onclick="javascript: d.checkNode(45,7,false,this.checked);" checked="checked">
+                        不予受理投诉</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd19" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 已移交投诉" name="authority" id="authority_44" value="44" onclick="javascript: d.checkNode(44,7,false,this.checked);" checked="checked">
+                        已移交投诉</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd20" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 直接受理投诉" name="authority" id="authority_43" value="43" onclick="javascript: d.checkNode(43,7,false,this.checked);" checked="checked">
+                        直接受理投诉</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd21" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 已受理投诉" name="authority" id="authority_42" value="42" onclick="javascript: d.checkNode(42,7,false,this.checked);" checked="checked">
+                        已受理投诉</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd22" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 未处理投诉" name="authority" id="authority_41" value="41" onclick="javascript: d.checkNode(41,7,false,this.checked);" checked="checked">
+                        未处理投诉</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/joinbottom.gif" alt=""><a id="sd23" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 添加新投诉" name="authority" id="authority_40" value="40" onclick="javascript: d.checkNode(40,7,false,this.checked);" checked="checked">
+                        添加新投诉</a></div>
+                    </div>
+                    <div class="dTreeNode"><img src="../images/join.gif" alt=""><a id="sd8" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                      <input type="checkbox" desc=" 咨询管理" name="authority" id="authority_8" value="8" onclick="javascript: d.checkNode(8,0,false,this.checked);" checked="checked">
+                      咨询管理</a></div>
+                    <div class="dTreeNode"><a href="javascript: d.o(9);"><img id="jd9" src="../images/minus.gif" alt=""></a><a href="javascript: d.o(9);" class="node">
+                      <input type="checkbox" desc=" 系统管理" name="authority" id="authority_9" value="9" onclick="javascript: d.checkNode(9,0,true,this.checked);">
+                      系统管理</a></div>
+                    <div id="dd9" class="clip" style="display: block;">
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd12" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 公告管理" name="authority" id="authority_51" value="51" onclick="javascript: d.checkNode(51,9,false,this.checked);">
+                        公告管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd13" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 用户管理" name="authority" id="authority_50" value="50" onclick="javascript: d.checkNode(50,9,false,this.checked);">
+                        用户管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd14" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 角色管理" name="authority" id="authority_49" value="49" onclick="javascript: d.checkNode(49,9,false,this.checked);">
+                        角色管理</a></div>
+                      <div class="dTreeNode"><img src="../images/line.gif" alt=""><img src="../images/joinbottom.gif" alt=""><a id="sd15" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 部门管理" name="authority" id="authority_48" value="48" onclick="javascript: d.checkNode(48,9,false,this.checked);">
+                        部门管理</a></div>
+                    </div>
+                    <div class="dTreeNode"><img src="../images/join.gif" alt=""><a id="sd10" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                      <input type="checkbox" desc=" 个人中心" name="authority" id="authority_360" value="360" onclick="javascript: d.checkNode(360,0,false,this.checked);">
+                      个人中心</a></div>
+                    <div class="dTreeNode"><a href="javascript: d.o(11);"><img id="jd11" src="../images/minusbottom.gif" alt=""></a><a href="javascript: d.o(11);" class="node">
+                      <input type="checkbox" desc=" 新闻管理" name="authority" id="authority_264" value="264" onclick="javascript: d.checkNode(264,0,true,this.checked);" checked="checked">
+                      新闻管理</a></div>
+                    <div id="dd11" class="clip" style="display: block;">
+                      <div class="dTreeNode"><img src="../images/empty.gif" alt=""><img src="../images/join.gif" alt=""><a id="sd37" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 新闻类型管理" name="authority" id="authority_265" value="265" onclick="javascript: d.checkNode(265,264,false,this.checked);" checked="checked">
+                        新闻类型管理</a></div>
+                      <div class="dTreeNode"><img src="../images/empty.gif" alt=""><img src="../images/joinbottom.gif" alt=""><a id="sd38" class="node" href="javascript:;" onmouseover="window.status='authority';return true;" onmouseout="window.status='';return true;">
+                        <input type="checkbox" desc=" 新闻资讯管理" name="authority" id="authority_266" value="266" onclick="javascript: d.checkNode(266,264,false,this.checked);" checked="checked">
+                        新闻资讯管理</a></div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div style="margin-left: 60px;margin-top: 30px;">
+                <button class="layui-btn save-btn">保存</button>
+            </div>
+        </div>
+        <script src="../js/jquery-1.10.2.min.js" charset="utf-8"></script>
+        <script src="../layui/layui.js" charset="utf-8"></script>
+        <script src="../js/x-admin.js"></script>
+        <script src="../js/dtree.js"></script>
+        <script>
+            layui.use('form', function(){
+                var form = layui.form(); //只有执行了这一步，部分表单元素才会修饰成功
+            });
+            $(".save-btn").click(function(){
+                layer.msg('保存成功', {icon: 1});
+            })
+        </script>
+    </body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>应用管理</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="../css/default.css" media="all">
+        <link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+        <link rel="stylesheet" href="../css/x-admin.css" media="all">
+        <link rel="stylesheet" href="../css/style.css" media="all">
+    </head>
+    <body>
+        <div class="x-nav">
+            <span class="layui-breadcrumb">
+                <a><cite>应用管理</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:5px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
+        </div>
+        <div class="x-body zhanghu-wrap">
+            <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">应用列表</li>
+                    <li>认证统计</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <form class="layui-form" action="">
+                            <blockquote class="layui-elem-quote">
+                                <div class="layui-input-inline">
+                                    <input type="text" name="" lay-verify="title" value="" placeholder="搜索关键字" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-btn-group" style="float:right">
+                                    <a href="edit-application.html" class="layui-btn">
+                                        <span style="font-size:14px">新增</span>
+                                    </a>
+                                    <button class="layui-btn">
+                                        <span style="font-size:14px">查询</span>
+                                    </button>
+                                </div>
+                            </blockquote>
+                            <table class="layui-table">
+                                <thead>
+                                    <tr>
+                                        <th width="50px">编号</th>
+                                        <th>应用名称</th>
+                                        <th>域名</th>
+                                        <th>IP</th>
+                                        <th>状态</th>
+                                        <th width="100px">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>贾汪全域应急指挥系统</td>
+                                        <td>yj.jiawang.com</td>
+                                        <td>51.26.126.43</td>
+                                        <td>
+                                            <span class="red">禁用</span>
+                                        </td>
+                                        <td>
+                                            <select lay-filter="doWork">
+                                                <option value="">请选择</option>
+                                                <option value="1">编辑</option>
+                                                <option value="2">删除</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>数据集成与共享系统</td>
+                                        <td>sj.jiawang.com</td>
+                                        <td>192.168.0.0</td>
+                                        <td>
+                                            <span class="red">禁用</span>
+                                        </td>
+                                        <td>
+                                            <select lay-filter="doWork">
+                                                <option value="">请选择</option>
+                                                <option value="1">编辑</option>
+                                                <option value="2">删除</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>贾汪全域旅游资源云平台</td>
+                                        <td>zy.jiawang.com</td>
+                                        <td>58.255.64.20</td>
+                                        <td>
+                                            <span class="color1">启用</span>
+                                        </td>
+                                        <td>
+                                            <select lay-filter="doWork">
+                                                <option value="">请选择</option>
+                                                <option value="1">编辑</option>
+                                                <option value="2">删除</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>B2B全域旅游担保交易平台</td>
+                                        <td>jy.jiawang.com</td>
+                                        <td>58.255.64.20</td>
+                                        <td>
+                                            <span class="color1">启用</span>
+                                        </td>
+                                        <td>
+                                            <select lay-filter="doWork">
+                                                <option value="">请选择</option>
+                                                <option value="1">编辑</option>
+                                                <option value="2">删除</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>贾汪全域旅游服务监管云平台</td>
+                                        <td>jg.jiawang.com</td>
+                                        <td>85.53.132.53</td>
+                                        <td>
+                                            <span class="color1">启用</span>
+                                        </td>
+                                        <td>
+                                            <select lay-filter="doWork">
+                                                <option value="">请选择</option>
+                                                <option value="1">编辑</option>
+                                                <option value="2">删除</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>贾汪区全域旅游一站式服务平台</td>
+                                        <td>yz.jiawang.com</td>
+                                        <td>127.53.52.1</td>
+                                        <td>
+                                            <span class="color1">启用</span>
+                                        </td>
+                                        <td>
+                                            <select lay-filter="doWork">
+                                                <option value="">请选择</option>
+                                                <option value="1">编辑</option>
+                                                <option value="2">删除</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>贾汪区全域旅游产品一键分销</td>
+                                        <td>fx.jiawang.com</td>
+                                        <td>255.255.255.0</td>
+                                        <td>
+                                            <span class="color1">启用</span>
+                                        </td>
+                                        <td>
+                                            <select lay-filter="doWork">
+                                                <option value="">请选择</option>
+                                                <option value="1">编辑</option>
+                                                <option value="2">删除</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div id="page"></div>
+                        </form>
+                    </div>
+                    <div class="layui-tab-item">
+                        <form class="layui-form" action="">
+                            <blockquote class="layui-elem-quote">
+                                <div class="layui-input-inline" style="float:left">
+                                    <button class="layui-btn">今日</button>
+                                    <button class="layui-btn">本周</button>
+                                    <button class="layui-btn">本月</button>
+                                    <button class="layui-btn">本季</button>
+                                    <button class="layui-btn">本年</button>
+                                </div>
+                                <label class="layui-form-label">日期范围</label>
+                                <div class="layui-input-inline">
+                                  <input class="layui-input" placeholder="开始日" id="LAY_demorange_s">
+                                </div>
+                                <div class="layui-input-inline">
+                                  <input class="layui-input" placeholder="截止日" id="LAY_demorange_e">
+                                </div>
+                                <div class="layui-btn-group" style="float:right">
+                                    <button class="layui-btn">
+                                        <span style="font-size:14px">搜索</span>
+                                    </button>
+                                </div>
+                            </blockquote>
+                        </form>
+                        <div class="rz-box">
+                            <div id="renzheng"></div>
+                            <div class="tab-box">
+                                <table class="layui-table" lay-skin="line">
+                                    <thead>
+                                        <tr>
+                                            <th style="text-align: left">认证统计</th>
+                                            <th></th>
+                                        </tr> 
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>成功</td>
+                                            <td>520次</td>
+                                        </tr>
+                                        <tr>
+                                            <td>失败</td>
+                                            <td>120次</td>
+                                        </tr>
+                                        <tr>
+                                            <td>总操作</td>
+                                            <td>640次</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <script src="../layui/layui.js" charset="utf-8"></script>
+        <!-- <script src="js/x-layui.js" charset="utf-8"></script> -->
+        <script src="../js/x-admin.js" charset="utf-8"></script>
+        <script src="http://cdn.bootcss.com/echarts/3.3.2/echarts.min.js" charset="utf-8"></script>
+        <script>
+            // 基于准备好的dom，初始化echarts实例
+            var myChart = echarts.init(document.getElementById('renzheng'));
+
+            // 指定图表的配置项和数据
+            var option = {
+                    tooltip: {
+                        trigger: "axis"
+                    },
+                    legend: {
+                        data: ["认证成功", "认证失败"],
+                        selectedMode: false
+                    },
+                    calculable: true,
+                    xAxis: [
+                        {
+                            type: "category",
+                            boundaryGap: false,
+                            data: ["00:00", "04:00", "08:00", "12:00", "16:00", "20:00", "24:00"],
+                            axisLine: {
+                                lineStyle: {
+                                    color: "rgb(0, 0, 0)",
+                                    width: 1
+                                }
+                            }
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            axisLine: {
+                                lineStyle: {
+                                    color: "rgb(0, 0, 0)",
+                                    width: 1
+                                }
+                            }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: "认证成功",
+                            type: "line",
+                            data: [50, 102, 130, 162, 210, 200, 98]
+                        },
+                        {
+                            name: "认证失败",
+                            type: "line",
+                            data: [5, 56, 67, 130, 170, 160, 51]
+                        }
+                    ],
+                    grid: {
+                        x: 20,
+                        y: 40,
+                        x2: 30,
+                        y2: 30,
+                        backgroundColor: "rgba(0,0,0,0)",
+                        borderWidth: 0
+                    },
+                    color: ["rgb(135, 206, 250)", "rgb(255, 127, 80)", "#da70d6", "#32cd32", "#6495ed", "#ff69b4", "#ba55d3", "#cd5c5c", "#ffa500", "#40e0d0", "#1e90ff", "#ff6347", "#7b68ee", "#00fa9a", "#ffd700", "#6699FF", "#ff6666", "#3cb371", "#b8860b", "#30e0e0"]
+                };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+        </script>
+        <script>
+            layui.use(['laydate','element','layer','form','laypage','upload'], function(){
+                var laypage = layui.laypage;
+                $ = layui.jquery;//jquery
+                laydate = layui.laydate;//日期插件
+                lement = layui.element();//面包导航
+                layer = layui.layer;//弹出层
+                form = layui.form()
+
+                var start = {
+                    min: laydate.now()
+                    ,max: '2099-06-16 23:59:59'
+                    ,istoday: false
+                    ,choose: function(datas){
+                      end.min = datas; //开始日选好后，重置结束日的最小日期
+                      end.start = datas //将结束日的初始值设定为开始日
+                    }
+                };
+              
+              var end = {
+                    min: laydate.now()
+                    ,max: '2099-06-16 23:59:59'
+                    ,istoday: false
+                    ,choose: function(datas){
+                      start.max = datas; //结束日选好后，重置开始日的最大日期
+                    }
+                };
+              
+                document.getElementById('LAY_demorange_s').onclick = function(){
+                    start.elem = this;
+                    laydate(start);
+                }
+                document.getElementById('LAY_demorange_e').onclick = function(){
+                    end.elem = this
+                    laydate(end);
+                }
+              
+                //监听提交
+                form.on('submit(*)', function(data){
+                    console.log(data);
+                    //发异步，把数据提交给php
+                    layer.alert("保存成功", {icon: 6});
+                    return false;
+                });
+
+                //分页
+                laypage({
+                    cont: 'page',
+                    pages: 30,
+                    skip: true
+                });
+                // 选择框跳转
+                form.on('select(doWork)',function(data){
+                    $(data.elem).val('');
+                    form.render('select');
+                   switch(data.value){
+                    case '1':
+                        location.href = "edit-application.html";
+                        break;
+                    case '2':
+                        layer.confirm('确定要删除该条信息吗？', {
+                            btn: ['确定','取消'] //按钮
+                        }, function(){
+                            layer.msg('删除成功', {icon: 1});
+                            setTimeout(function(){
+                                location.reload();
+                            },1000);
+                        },function(){
+
+                        });
+                        break;
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>

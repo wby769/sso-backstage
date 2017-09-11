@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>编辑个人信息</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
+        <link rel="stylesheet" type="text/css" href="../layui/css/layui.css">
+        <link rel="stylesheet" href="../css/x-admin.css" media="all">
+        <link rel="stylesheet" href="../css/style.css" media="all">
+    </head>
+    <body>
+        <div class="x-nav" style="background: #fff;">
+            <span class="layui-breadcrumb">
+                <a><cite>首页</cite></a>
+                <a href="putong-user.html"><cite>普通用户</cite></a>
+                <a><cite>编辑个人信息</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:5px;float:right"  href="javascript:location.replace(location.href);" title="刷新">
+                <i class="layui-icon" style="line-height:30px">ဂ</i>
+            </a>
+        </div>
+        <div class="x-body userinfo-wrap">
+            <form class="layui-form" action="putong-user.html">
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span class="red">*</span>用户名</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input" value="张晨">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span class="red">*</span>证件号码</label>
+                    <div class="layui-input-inline">
+                        <select name="city" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0" selected="">身份证</option>
+                            <option value="1">驾驶证</option>
+                            <option value="2">护照</option>
+                        </select>
+                    </div>
+                    <input type="text" name="title" required  lay-verify="required" placeholder="请输入身份证" autocomplete="off" class="layui-input" value="3201231021011201230" style="width: 220px;">
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span class="red">*</span>证件地址</label>
+                    <div class="layui-input-inline">
+                        <select name="city" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0" selected="">江苏省</option>
+                            <option value="1">浙江省</option>
+                            <option value="2">安徽省</option>
+                        </select>
+                    </div>
+                    <div class="layui-input-inline" style="width: 220px;margin-right: 0;">
+                        <select name="city" lay-verify="required">
+                            <option value=""></option>
+                            <option value="0" selected="">徐州</option>
+                            <option value="1">扬州</option>
+                            <option value="2">南京</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span class="red">*</span>详细地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入详细地址" autocomplete="off" class="layui-input" value="徐州贾汪区佳旺路1号">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span class="red">*</span>手机号码</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required  lay-verify="required" placeholder="请输入手机号码" autocomplete="off" class="layui-input" value="13021201268">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span class="red">*</span>电子邮箱</label>
+                    <div class="layui-input-block">
+                        <input type="email" name="title" required  lay-verify="required" placeholder="请输入电子邮箱" autocomplete="off" class="layui-input" value="2123354564@sina.com">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span class="red">*</span>登录账号</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="title" required  lay-verify="required" placeholder="请输入登录账号" autocomplete="off" class="layui-input" value="user1">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span class="red">*</span>登录密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="title" required  lay-verify="required" placeholder="请输入登录密码" autocomplete="off" class="layui-input" value="123456">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label"><span class="red">*</span>确认密码</label>
+                    <div class="layui-input-block">
+                        <input type="password" name="title" required  lay-verify="required" placeholder="请确认密码" autocomplete="off" class="layui-input" value="123456">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit lay-filter="formDemo">保存</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <script src="../js/jquery-1.10.2.min.js" charset="utf-8"></script>
+        <script src="../layui/layui.js" charset="utf-8"></script>
+        <script src="../js/x-admin.js"></script>
+        <script>
+            layui.use('form', function(){
+                var form = layui.form(); //只有执行了这一步，部分表单元素才会修饰成功
+            });
+            $("form").submit(function(e){
+                e.preventDefault();
+                layer.msg('保存成功', {icon: 1});
+            });
+        </script>
+    </body>
+</html>

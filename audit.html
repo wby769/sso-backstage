@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>审计管理</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="stylesheet" href="./css/default.css" media="all">
+        <link rel="stylesheet" type="text/css" href="./layui/css/layui.css">
+        <link rel="stylesheet" href="./css/x-admin.css" media="all">
+        <link rel="stylesheet" href="./css/style.css" media="all">
+    </head>
+    <body>
+        <div class="x-nav">
+            <span class="layui-breadcrumb">
+                <a><cite>审计管理</cite></a>
+            </span>
+            <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:5px;float:right"  href="javascript:location.replace(location.href);" title="刷新"><i class="layui-icon" style="line-height:30px">ဂ</i></a>
+        </div>
+        <div class="x-body zhanghu-wrap">
+            <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                <ul class="layui-tab-title">
+                    <li class="layui-this">账号审计</li>
+                    <li>安全审计</li>
+                    <li>差异审计</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item layui-show">
+                        <form class="layui-form" action="">
+                            <blockquote class="layui-elem-quote">
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">用户名</label>
+                                    <div class="layui-input-inline">
+                                        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input" placeholder="请输入用户名">
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">类型</label>
+                                    <div class="layui-input-inline">
+                                        <select name="city" lay-verify="required">
+                                            <option value=""></option>
+                                            <option value="0" selected="">从未登录</option>
+                                            <option value="1">登录IP异常</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="layui-btn-group" style="float:right">
+                                    <button class="layui-btn">
+                                        <span style="font-size:14px">搜索</span>
+                                    </button>
+                                </div>
+                            </blockquote>
+                            <table class="layui-table">
+                                <thead>
+                                    <tr>
+                                        <th width="50px">编号</th>
+                                        <th>用户名</th>
+                                        <th>姓名</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>user1</td>
+                                        <td>张晨</td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>user2</td>
+                                        <td>刘飞</td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>user3</td>
+                                        <td>张瑞文</td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>user4</td>
+                                        <td>王芳芳</td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>user5</td>
+                                        <td>李刚</td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="layui-btn-group">
+                                <div id="page"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="layui-tab-item">
+                        <form class="layui-form" action="">
+                            <blockquote class="layui-elem-quote">
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">用户名</label>
+                                    <div class="layui-input-inline">
+                                        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input" placeholder="请输入用户名">
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">存在问题</label>
+                                    <div class="layui-input-inline">
+                                        <select name="city" lay-verify="required">
+                                            <option value=""></option>
+                                            <option value="0" selected="">账户恶意登录</option>
+                                            <option value="1">IP地址恶意注册</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="layui-btn-group" style="float:right">
+                                    <button class="layui-btn">
+                                        <span style="font-size:14px">搜索</span>
+                                    </button>
+                                </div>
+                            </blockquote>
+                            <table class="layui-table">
+                                <thead>
+                                <tr>
+                                    <th width="50px">编号</th>
+                                    <th>用户名</th>
+                                    <th>姓名</th>
+                                    <th>存在问题</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>user</td>
+                                    <td>张晨</td>
+                                    <td>账户恶意登录</td>
+                                    <td>
+                                        <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>user</td>
+                                    <td>刘飞</td>
+                                    <td>账户恶意登录</td>
+                                    <td>
+                                        <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>user1</td>
+                                    <td>张瑞文</td>
+                                    <td>账户恶意登录</td>
+                                    <td>
+                                        <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>user2</td>
+                                    <td>王芳芳</td>
+                                    <td>IP地址恶意注册</td>
+                                    <td>
+                                        <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>user3</td>
+                                    <td>李刚</td>
+                                    <td>IP地址恶意注册</td>
+                                    <td>
+                                        <a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="layui-btn-group">
+                                <div id="page1"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="layui-tab-item">
+                        <form class="layui-form" action="">
+                            <blockquote class="layui-elem-quote">
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">用户名</label>
+                                    <div class="layui-input-inline">
+                                        <input type="tel" name="phone" lay-verify="phone" autocomplete="off" class="layui-input" placeholder="请输入用户名">
+                                    </div>
+                                </div>
+                                <div class="layui-inline">
+                                    <label class="layui-form-label">重复类型</label>
+                                    <div class="layui-input-inline">
+                                        <label class="label-inp">
+                                            <input type="checkbox" name="type">用户名重复
+                                        </label>
+                                        <label class="label-inp">
+                                            <input type="checkbox" name="type">姓名名重复
+                                        </label>
+                                        <label class="label-inp">
+                                            <input type="checkbox" name="type">手机号重复
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="layui-btn-group" style="float:right">
+                                    <button class="layui-btn">
+                                        <span style="font-size:14px">搜索</span>
+                                    </button>
+                                </div>
+                            </blockquote>
+                            <table class="layui-table">
+                                <thead>
+                                    <tr>
+                                        <th width="50px"><input type="checkbox" name="id"> 编号</th>
+                                        <th>用户名</th>
+                                        <th>姓名</th>
+                                        <th>手机号</th>
+                                        <th>证件号码</th>
+                                        <th>所属系统</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" name="id"> 1</td>
+                                        <td>user</td>
+                                        <td>张晨</td>
+                                        <td>13021201235</td>
+                                        <td>3205698541225868</td>
+                                        <td>贾汪区全域应急指挥系统</td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="id"> 2</td>
+                                        <td>user</td>
+                                        <td>刘飞</td>
+                                        <td>15369865454</td>
+                                        <td>320236585456214</td>
+                                        <td>数据集成与共享系统</td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="id"> 3</td>
+                                        <td>user1</td>
+                                        <td>张瑞文</td>
+                                        <td>18969863325</td>
+                                        <td>320658452368547</td>
+                                        <td>贾汪全域旅游资源云平台</td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="id"> 4</td>
+                                        <td>user2</td>
+                                        <td>王芳芳</td>
+                                        <td>189516265555</td>
+                                        <td>3206584525698548</td>
+                                        <td>B2B全域旅游担保交易平台</td>
+                                        <td>
+                                            <button class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" name="id"> 5</td>
+                                        <td>user3</td>
+                                        <td>李刚</td>
+                                        <td>18951625582</td>
+                                        <td>320199756856585</td>
+                                        <td>贾汪全域旅游服务监管平台</td>
+                                        <td>
+                                            <a href="javascript:;" class="layui-btn layui-btn-danger layui-btn-small ty-btn">停用</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="layui-btn-group">
+                                <a class="layui-btn hebing-btn" href="javascript:;">
+                                    <span style="font-size:14px">账号合并</span>
+                                </a>
+                                <div id="page1"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-- 弹框 -->
+        <div class="hebing" style="display: none;padding:5px 10px;">
+            <table class="layui-table" style="text-align: center">
+                <thead>
+                    <tr>
+                        <th style="text-align: center">用户名</th>
+                        <th style="text-align: center">姓名</th>
+                        <th style="text-align: center">手机号</th>
+                        <th style="text-align: center">证件号码</th>
+                        <th style="text-align: center">所属系统</th>
+                        <th style="text-align: center">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>user1</td>
+                        <td>张晨</td>
+                        <td>13021201235</td>
+                        <td>3205698541225868</td>
+                        <td>贾汪区全域应急指挥系统</td>
+                        <td>
+                            <button class="layui-btn layui-btn-mini">已选</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>user2</td>
+                        <td>张晨</td>
+                        <td>13021201235</td>
+                        <td>3205698541225868</td>
+                        <td>数据集成与共享系统</td>
+                        <td>
+                            <button class="layui-btn layui-btn-normal layui-btn-mini">选择</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>user3</td>
+                        <td>张晨</td>
+                        <td>13021201235</td>
+                        <td>3205698541225868</td>
+                        <td>贾汪全域旅游资源平台</td>
+                        <td>
+                            <button class="layui-btn layui-btn-normal layui-btn-mini">选择</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="./js/jquery-1.10.2.min.js" type="text/javascript"></script>
+        <script src="./layui/layui.js" charset="utf-8"></script>
+        <!-- <script src="js/x-layui.js" charset="utf-8"></script> -->
+        <script src="./js/x-admin.js" charset="utf-8"></script>
+        <script>
+            layui.use(['laydate','element','layer','form','laypage','upload'], function(){
+                var laypage = layui.laypage;
+                $ = layui.jquery;//jquery
+                laydate = layui.laydate;//日期插件
+                lement = layui.element();//面包导航
+                layer = layui.layer;//弹出层
+                form = layui.form()
+              
+                //监听提交
+                form.on('submit(*)', function(data){
+                    console.log(data);
+                    //发异步，把数据提交给php
+                    layer.alert("保存成功", {icon: 6});
+                    return false;
+                });
+
+                //分页
+                laypage({
+                    cont: 'page',
+                    pages: 20,
+                    skip: true
+                });
+                laypage({
+                    cont: 'page1',
+                    pages: 20,
+                    skip: true
+                });
+            })
+            $(".hebing-btn").click(function(){
+                layer.open({
+                    type: 1,
+                    title: '选择合并后账户信息', //加上边框
+                    area: ['720px', '290px'], //宽高
+                    content: $(".hebing"),
+                    btn: ['确认合并'],
+                    btnAlign: 'c',
+                    yes: function(index, layero){
+                        layer.closeAll();
+                    }
+                });
+            })
+
+            $(".ty-btn").click(function(e){
+                e.preventDefault();
+                layer.msg('停用成功', {icon:4});
+            })
+        </script>
+    </body>
+</html>
